@@ -14,7 +14,16 @@
 
 <body>
 
-{% include 'header.html' %}
+    <div class="header">
+        <div class="container">
+        {% include 'menu.html' %}
+
+            {% block banner %}
+
+
+            {% endblock banner %}
+        </div>
+    </div>
     {% block content %}
     <!-- Feadtued Categories -->
 
@@ -79,7 +88,8 @@
             }
         }
     </script>
-
+    {% block extra_scripts %}
+    {% endblock %}
 </body>
 
 </html>
